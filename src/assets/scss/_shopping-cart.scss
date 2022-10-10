@@ -1,6 +1,10 @@
 /*---------------------
   Shopping Cart
 -----------------------*/
+.add-cart{
+  cursor: pointer;
+}
+
 .shopping__cart__table {
   margin-bottom: 30px;
 
@@ -67,7 +71,7 @@
 
                 input {
                   width: 50px;
-                  border: none;
+                  // border: none;
                   text-align: center;
                   color: $heading-color;
                   font-size: 16px;

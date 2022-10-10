@@ -2,6 +2,7 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import '@/assets/css/bootstrap.min.css'
+import '@/assets/css/font-awesome.min.css'
 import { createPinia, PiniaVuePlugin } from 'pinia'
 import VueCompositionAPI from '@vue/composition-api'
 
@@ -23,6 +24,9 @@ Vue.component('shop-component',() => import('@/components/shop/ShopComponent.vue
 Vue.component('filter-shop-component',() => import('@/components/shop/FilterShopComponent.vue') )
 
 Vue.component('product-detail-component',() => import('@/components/product/ProductDetailComponent.vue') )
+
+Vue.component('list-item-component',() => import('@/components/cart/ListItemComponent.vue') )
+Vue.component('total-buy-component',() => import('@/components/cart/TotalBuyComponent.vue') )
 
 
 Vue.component('footer-component',() => import('@/components/base/FooterComponent.vue') )

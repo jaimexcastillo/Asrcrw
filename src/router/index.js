@@ -53,6 +53,12 @@ const routes = [
     // params: { NewCategories: ['accesorios'] },
     component: () => import(/* webpackChunkName: "about" */ '../views/Product.vue')
   },
+  {
+    path: '/cart',
+    name: 'Cart',
+    // params: { NewCategories: ['accesorios'] },
+    component: () => import(/* webpackChunkName: "about" */ '../views/Cart.vue')
+  },
 ]
 
 const router = new VueRouter({

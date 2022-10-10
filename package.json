@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "@vue/composition-api": "^1.7.0",
+    "@vueuse/core": "^9.3.0",
     "hooper": "^0.3.4",
     "pinia": "^2.0.21",
     "vue": "^2.6.14",

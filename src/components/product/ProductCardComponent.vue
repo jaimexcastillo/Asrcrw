@@ -5,7 +5,6 @@
             class="mix new-arrivals" 
             v-for="(product) in products" :key="product.id" 
             :class="clases"
-            v-if="product.category.find( ele => categories.includes(ele))  || categories.length == 0 "
         >   
             <div class="product__item"  v-bind:class="[ product.sale.sale ? 'sale' : 0 ]">
                 <router-link :to=" '/product/'+product.text.replace(/ /g,'-')" > 
@@ -23,7 +22,7 @@
 
                     <div class="product__item__text z-index-up">
                         <h6>{{product.text}}</h6>
-                        <a href="#" class="add-cart">+ Añadir al carrito</a>
+                        <a  class="add-cart" @click="cartStore.addItemToCart(product)" >+ Añadir al carrito</a>
 
 
                         <!-- todo: sistema de estrellas -->
@@ -52,7 +51,8 @@
 </template>
 
 <script>
-import { useProductsStore } from '../../store'
+import { useProductsStore, useCart } from '../../store'
+
 
 export default {
     props: ['categorySelected', 'clases', 'filteredCategories'],
@@ -61,7 +61,8 @@ export default {
             products:useProductsStore().products,
             test: ['camisas'],
             colors: ['negro', 'verde', 'rosa', 'amarillo', 'gris', 'blanco', 'morado', 'rojo', 'azul'],
-            categories: this.filteredCategories ?? []
+            categories: this.filteredCategories ?? [],
+            cartStore: useCart()
             
         }
     },
@@ -79,9 +80,15 @@ export default {
             }
         },
         //este es para elshop
+        // v-if="product.category.find( ele => categories.includes(ele))  || categories.length == 0 "
+
         filteredCategories:{
             handler(newVal, oldval){
                 this.categories = newVal;
+                if(newVal.length > 0)
+                this.products = this.products.find(item => item.category.find(ele => newVal.includes(ele)))
+                else
+                this.products = useProductsStore().products
             }
         }
     },

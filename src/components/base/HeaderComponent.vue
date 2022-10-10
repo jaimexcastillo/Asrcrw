@@ -29,7 +29,7 @@
                     <div class="header__nav__option">
                         <a href="#" class="search-switch"><img src="../../assets/img/icon/search.png" alt=""></a>
                         <a href="#"><img src="../../assets/img/icon/heart.png" alt=""></a>
-                        <a href="#"><img src="../../assets/img/icon/cart.png" alt=""> <span>0</span></a>
+                        <router-link to="/cart"><img src="../../assets/img/icon/cart.png" alt=""> <span>{{cartQuantity.getCartQuantityItems}}</span></router-link>
                         <div class="price">$0.00</div>
                     </div>
                 </div>
@@ -39,12 +39,24 @@
 </template>
 
 <script>
+import { useCart } from '@/store'
+
 export default {
     data(){
         return{
-            active: this.$router?.currentRoute?.fullPath
+            active: this.$router?.currentRoute?.fullPath,
+            cartQuantity: useCart()
         }
     },
+    watch:{
+        useCart:{
+            inmediatre: true,
+            handler(newVal, oldVal){
+                console.log('update');
+                this.cartQuantity = newVal.getCartQuantityItems
+            }
+        }
+    }
 }
 </script>
 
