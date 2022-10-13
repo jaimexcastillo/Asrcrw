@@ -29,6 +29,7 @@ Vue.component('list-item-component',() => import('@/components/cart/ListItemComp
 Vue.component('total-buy-component',() => import('@/components/cart/TotalBuyComponent.vue') )
 
 
+Vue.component('vue-loader-component',() => import('@/components/VueLoaderComponent.vue') )
 Vue.component('footer-component',() => import('@/components/base/FooterComponent.vue') )
 
 

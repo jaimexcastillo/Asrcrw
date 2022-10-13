@@ -95,8 +95,8 @@
           }
 
           &.cart__close {
-
             i {
+              cursor: pointer;
               font-size: 18px;
               color: $heading-color;
               height: 40px;

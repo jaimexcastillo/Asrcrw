@@ -112,6 +112,17 @@ ol {
 /*---------------------
   Helper CSS
 -----------------------*/
+.main-loader{
+  top: 0;
+  position: absolute;
+  z-index: 999 !important;
+  width: 100vw;
+  height: 100vh;
+  background-color: #111111d2;
+}
+.spinner--circle-2{
+  border-color: rgb(53, 73, 94) $primary-color $primary-color !important;
+}
 .z-index-up{
   z-index: 999 !important; 
 }

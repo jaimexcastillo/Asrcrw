@@ -22,10 +22,7 @@
                                         <li @click="setCategory('ninos')" v-bind:class="[ category.find(ele => ele == 'ninos' )  ? 'category-selected' : '']" class="select-category">Niños (20)</li>
                                         <li @click="setCategory('accesorios')" v-bind:class="[ category.find(ele => ele == 'accesorios' )  ? 'category-selected' : '']" class="select-category">Accesorios (20)</li>
                                         <!-- <li><a href="#">Shoes (20)</a></li>
-                                        <li><a href="#">Accessories (20)</a></li>
-                                        <li><a href="#">Kids (20)</a></li>
-                                        <li><a href="#">Kids (20)</a></li>
-                                        <li><a href="#">Kids (20)</a></li> -->
+                                        <li><a href="#">Accessories (20)</a></li> -->
                                     </ul>
                                 </div>
                             </div>

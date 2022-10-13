@@ -4,10 +4,32 @@
     <header-component />
     
     <router-view/>
+    <vue-loader-component v-if="loader.loader" />
 
     <footer-component />
   </div>
 </template>
+
+<script>
+import {useLoader} from '@/store'
+
+export default {
+  data(){
+    return{
+      loader: useLoader()
+    }
+  },
+  beforeMount(){
+    this.loader.setLoader(true)
+  },
+  mounted(){
+    let self = this
+    setTimeout(function() {
+            self.loader.setLoader(false);
+      }, 2000);
+  }
+}
+</script>
 
 <style lang="scss">
 #app {
