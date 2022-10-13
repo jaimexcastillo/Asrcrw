@@ -5,7 +5,8 @@ import { useStorage } from '@vueuse/core'
 export const useCart = defineStore('cart', {
     state: () => {
         return { 
-            cart: useStorage('cart',[]) 
+            cart: useStorage('cart',[]) ,
+            total: 0
         }
     },
     // could also be defined as
@@ -19,6 +20,12 @@ export const useCart = defineStore('cart', {
         }
     },
     getters:{
-        getCartQuantityItems: (state) => state.cart.length
+        getCartQuantityItems: (state) => state.cart.length,
+        getTotal:state =>{ state.cart.forEach( item =>{
+            state.total = item.price + state.total
+            // console.log(state.total);
+            })
+            return state.total.toFixed(2)
+        }
     }
   })

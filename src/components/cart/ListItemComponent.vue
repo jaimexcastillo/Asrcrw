@@ -77,7 +77,6 @@ export default {
                 
         },
         RemoveItem(id){
-            console.log(id);   
             useCart().removeItemToCart(id)
             this.cart = this.groupCart(useCart().cart)
             this.$forceUpdate()

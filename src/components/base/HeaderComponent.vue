@@ -54,6 +54,7 @@ export default {
             handler(newVal, oldVal){
                 console.log('update');
                 this.cartQuantity = newVal.getCartQuantityItems
+                this.$forceUpdate()
             }
         }
     }

@@ -8,7 +8,7 @@ export const jsonProducts =[
                         percent: false
                 },
                 new: true,
-                price: 67.55,
+                price: 67,
                 best: true,
                 stars: 5,
                 category: ['hombres','camisas', '100-200', '200-350' ,'xs', 's', 'm', 'xl', '2xl', 'negro', 'verde'],
@@ -22,7 +22,7 @@ export const jsonProducts =[
                         percent: 10
                 },
                 new: false,
-                price: 167.55,
+                price: 167,
                 best: true,
                 stars: 1,
                 category: ['hombres','camisas', '100-200', '200-350' ,'xs', 's', 'm', 'xl', '2xl', 'negro']
@@ -36,7 +36,7 @@ export const jsonProducts =[
                         percent: false
                 },
                 new: false,
-                price: 167.55,
+                price: 167,
                 best: false,
                 stars: 4,
                 category: ['mujeres', 'accesorios' , 'verde', 'rosa']
@@ -51,7 +51,7 @@ export const jsonProducts =[
                         percent: false
                 },
                 new: false,
-                price: 167.55,
+                price: 165,
                 best: true,
                 stars: 2,
                 category: ['morado']
@@ -66,7 +66,7 @@ export const jsonProducts =[
                         percent: 20
                 },
                 new: false,
-                price: 167.55,
+                price: 170,
                 best: false,
                 stars: 5,
                 category: ['blanco']
@@ -82,7 +82,7 @@ export const jsonProducts =[
                         percent: 15
                 },
                 new: false,
-                price: 167.55,
+                price: 155,
                 best: true,
                 stars: 3,
                 category: ['amarillo']
@@ -97,7 +97,7 @@ export const jsonProducts =[
                         percent: 5
                 },
                 new: false,
-                price: 167.55,
+                price: 1655,
                 best: false,
                 stars: 0,
                 category: []
@@ -113,7 +113,7 @@ export const jsonProducts =[
                         percent: false
                 },
                 new: false,
-                price: 167.55,
+                price: 165,
                 best: false,
                 stars: 5,
                 category: []
@@ -128,7 +128,7 @@ export const jsonProducts =[
                         percent:10
                 },
                 new: false,
-                price: 166.55,
+                price: 166,
                 best: false,
                 stars: 4,
                 category: ['camisas']
