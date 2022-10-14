@@ -1,8 +1,8 @@
 <template>
   <div class="home">
     <carousel-component />
-    <banner-component />
-    <quick-store-component />
+    <!-- <banner-component /> -->
+    <quick-store-component class="mt-5" />
     <instagram-component />
 
   </div>

@@ -114,7 +114,7 @@ ol {
 -----------------------*/
 .main-loader{
   top: 0;
-  position: absolute;
+  position: fixed;
   z-index: 999 !important;
   width: 100vw;
   height: 100vh;

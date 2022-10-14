@@ -16,12 +16,14 @@ export const useCart = defineStore('cart', {
             this.cart.push(item)
         },
         removeItemToCart(id){
-           this.cart = this.cart.filter(item => item.id != id )
+           this.cart = this.cart.filter(item => parseInt(item.id) != id )
         }
     },
     getters:{
         getCartQuantityItems: (state) => state.cart.length,
-        getTotal:state =>{ state.cart.forEach( item =>{
+        getTotal:state =>{
+            state.total = 0
+            state.cart.forEach( item =>{
             state.total = item.price + state.total
             // console.log(state.total);
             })
