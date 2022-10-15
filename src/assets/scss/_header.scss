@@ -220,7 +220,7 @@
 
         span {
             color: #0d0d0d;
-            font-size: 11px;
+            font-size: 9px;
             position: absolute;
             left: 5px;
             top: 8px;
@@ -230,17 +230,53 @@
             margin-right: 0;
         }
     }
+    
+    .cart-header{
+        width: 19px;
+        height: 19px;
+    }
+    .cart-number{
+        position: absolute;
+        border-radius: 50%;
+        top: -5px;
+        left: 12px;
+        color: $white-color;
+        background-color: $red;
+        padding: 1px 4px;
+
+        &.update-cart{
+          animation: cartBackground 1s linear forwards .2s;
+        }
+    }
 
     .price {
         font-size: 15px;
         color: $heading-color;
         font-weight: 700;
         display: inline-block;
-        margin-left: -20px;
+        margin-left: -10px;
         position: relative;
         top: 3px;
     }
 }
+
+@keyframes cartBackground {
+    0% {
+      background: $white-color;
+    }
+    25% {
+      background: $white-color;
+    }
+    50% {
+      background: $red;
+    }
+    75% {
+      background: $red;
+    }
+    100% {
+      background: $red;
+    }
+  }
 
 .offcanvas-menu-wrapper {
     display: none;

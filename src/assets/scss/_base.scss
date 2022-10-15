@@ -89,7 +89,7 @@ input:focus,
 select:focus,
 button:focus,
 textarea:focus {
-  outline: none;
+  outline: none !important;
 }
 
 a:hover,

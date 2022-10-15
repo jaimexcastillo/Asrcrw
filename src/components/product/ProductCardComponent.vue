@@ -22,8 +22,17 @@
 
                     <div class="product__item__text z-index-up">
                         <h6>{{product.text}}</h6>
-                        <a  class="add-cart" @click="cartStore.addItemToCart(product)" >+ Añadir al carrito</a>
-
+                        <!-- <a  class="add-cart" @click="cartStore.addItemToCart(product)" >+ Añadir al carrito</a> -->
+                      
+                        <button class="add-cart" @click="cartStore.addItemToCart(product); addCartAnimation($event)">
+                            <span>Añadir al carrito</span>
+                            <div class="cart">
+                                <svg viewBox="0 0 36 26">
+                                    <polyline points="1 2.5 6 2.5 10 18.5 25.5 18.5 28.5 7.5 7.5 7.5"></polyline>
+                                    <polyline points="15 13.5 17 15.5 22 10.5"></polyline>
+                                </svg>
+                            </div>
+                        </button>
 
                         <!-- todo: sistema de estrellas -->
                         <!-- <div class="rating">
@@ -64,6 +73,25 @@ export default {
             categories: this.filteredCategories ?? [],
             cartStore: useCart()
             
+        }
+    },
+    methods:{
+        addCartAnimation(event){
+
+                let contador = document.getElementById('cart-number')
+                console.log(event.path[1]);
+                console.log(event);
+                if(!event.path[1].classList.contains('loading')){
+                    contador.classList.add('update-cart')
+                    event.path[1].classList.add('loading')
+                    setTimeout(() => {
+                        event.path[1].classList.remove('loading')
+                    }, 2200);
+                    setTimeout(() => {
+                        contador.classList.remove('update-cart')
+                    }, 1200);
+                }
+            event.preventDefault();
         }
     },
     watch:{

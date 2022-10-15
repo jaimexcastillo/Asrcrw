@@ -94,8 +94,8 @@
 
     .product__item__text {
 
-      a {
-        top: 22px;
+      a,.add-cart {
+        top: 12px;
         opacity: 1;
         visibility: visible;
       }
@@ -189,9 +189,9 @@
   padding-top: 25px;
   position: relative;
 
-  a {
+  a,.add-cart {
     font-size: 15px;
-    color: $primary-color;
+    color: $heading-color;
     font-weight: 700;
     position: absolute;
     left: 0;
