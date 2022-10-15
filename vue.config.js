@@ -1,6 +1,8 @@
 module.exports = {
-    base: './',
-    publicPath: process.env.NODE_ENV === "production" ? "/Asrcrw/" : "/",
+    build: {
+        assetsPublicPath: '',
+    },
+    publicPath: "/",
     lintOnSave: false,
     css: {
         loaderOptions: {
