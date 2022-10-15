@@ -1,4 +1,5 @@
 module.exports = {
+    base: './',
     publicPath: process.env.NODE_ENV === "production" ? "/Asrcrw/" : "/",
     lintOnSave: false,
     css: {
