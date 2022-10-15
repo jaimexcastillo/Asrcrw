@@ -1,8 +1,5 @@
 module.exports = {
-    build: {
-        assetsPublicPath: '',
-    },
-    publicPath: "/",
+    publicPath: "./",
     lintOnSave: false,
     css: {
         loaderOptions: {
