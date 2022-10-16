@@ -12,7 +12,7 @@
                     <div class="col-lg-6 col-md-5">
                         <div class="header__top__right">
                             <div class="header__top__links">
-                                <a href="#">Sign in</a>
+                            <!-- <a href="#">Sign in</a> -->
                                 <a href="#">FAQs</a>
                             </div>
                             <div class="header__top__hover">
@@ -28,7 +28,7 @@
                 </div>
             </div>
         </div>
-        <div class="close-header" @click="show = false"> x </div>
+        <div class="close-header header__top" @click="show = false"> x </div>
     </header>
   </div>
 </template>

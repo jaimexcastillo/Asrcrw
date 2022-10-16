@@ -35,7 +35,45 @@
                     </div>
                 </div>
             </div>
-            <div class="canvas__open"><i class="fa fa-bars"></i></div>
+            <div class="canvas__open" @click="showMenu = !showMenu"><i class="fa fa-bars"></i></div>
+            <Transition name="fade">
+                <div class="menu-mobil" v-if="showMenu">
+                    <div class="mt-5">
+                        <img  style="padding:0px 22px" src="../../assets/img/logotipo.jpg" alt="">
+                    </div>
+                    <div class="card">
+                        <div class="card-heading-mobile">
+                            <router-link to="/" @click="showMenu = false"><span class="mobile-header"> Inicio </span></router-link>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-heading">
+                            <router-link to="/shop" @click="showMenu = false"><span class="mobile-header"> Tienda </span></router-link>
+                        </div>
+                        <div class="collapse show">
+                            <div class="card-body">
+                                <div class="mobile__sidebar__categories">
+                                    <ul >
+                                       <li><router-link to="/shop" @click="showMenu = false">Todos</router-link></li>
+                                        <li><router-link to="/shop/hombres" @click="showMenu = false">Hombres</router-link></li>
+                                        <li><router-link to="/shop/mujeres" @click="showMenu = false">Mujeres</router-link></li>
+                                        <li><router-link to="/shop/ninos" @click="showMenu = false">Niños</router-link></li>
+                                        <li><router-link to="/shop/accesorios" @click="showMenu = false">Accesorios</router-link></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-heading">
+                            <router-link to="/about" @click="showMenu = false"><span class="mobile-header" > Acerca de </span></router-link>
+                        </div>
+                    </div>
+                </div>
+            
+            </Transition>
+            <div class="helper-menu-mobil" v-if="showMenu" @click="showMenu = false">
+            </div>
         </div>
 </template>
 
@@ -46,7 +84,8 @@ export default {
     data(){
         return{
             active: this.$router?.currentRoute?.fullPath,
-            cartQuantity: useCart()
+            cartQuantity: useCart(),
+            showMenu: false
         }
     },
     watch:{

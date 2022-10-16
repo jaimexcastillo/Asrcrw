@@ -7,6 +7,11 @@
   transition: opacity 0.5s ease;
 }
 
+
+.v-enter{
+  opacity: 0;
+  transition: opacity 0.5s ease-in;
+}
 .v-enter-to{
   opacity: 1;
 }

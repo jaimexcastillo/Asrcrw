@@ -112,6 +112,68 @@ ol {
 /*---------------------
   Helper CSS
 -----------------------*/
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s ease-out;
+}
+
+.fade-enter{
+  opacity: 0;
+  transition: opacity 0.5s ease-in;
+}
+.fade-enter-to{
+  opacity: 1;
+}
+
+
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+.mobile-header{
+  color: $black-color;
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.card-heading-mobile{
+  padding: 15px 0px;
+}
+.mobile__sidebar__categories{
+  li{
+    cursor: pointer;
+    list-style: none;
+
+  }
+  a{
+    color: $black-color;
+    font-size: 15px;
+    line-height: 30px;
+  }
+}
+
+.menu-mobil{
+  position: fixed;
+  height: 100vh;
+  width: 70%;
+  background-color: $white-color;
+  color: $black-color;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+}
+.helper-menu-mobil{
+  position:fixed;
+  height: 100vh;
+  width: 30%;
+  background-color: #0000005b;
+  right: 0;
+  z-index: 1000;
+  top: 0;
+}
+
 .main-loader{
   top: 0;
   position: fixed;
