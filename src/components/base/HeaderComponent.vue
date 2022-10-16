@@ -41,12 +41,12 @@
                     <div class="mt-5">
                         <img  style="padding:0px 22px" src="../../assets/img/logotipo.jpg" alt="">
                     </div>
-                    <div class="card">
+                    <div class="card" style="border: none">
                         <div class="card-heading-mobile">
                             <router-link to="/" @click="showMenu = false"><span class="mobile-header"> Inicio </span></router-link>
                         </div>
                     </div>
-                    <div class="card">
+                    <div class="card" style="border: none">
                         <div class="card-heading">
                             <router-link to="/shop" @click="showMenu = false"><span class="mobile-header"> Tienda </span></router-link>
                         </div>
@@ -64,7 +64,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="card">
+                    <div class="card" style="border: none">
                         <div class="card-heading">
                             <router-link to="/about" @click="showMenu = false"><span class="mobile-header" > Acerca de </span></router-link>
                         </div>
