@@ -60,7 +60,7 @@
 </template>
 
 <script>
-import { useProductsStore, useCart } from '../../store'
+import { useProductsStore, useCart } from '@/store'
 
 
 export default {
