@@ -27,6 +27,9 @@ export default {
     setTimeout(function() {
             self.loader.setLoader(false);
       }, 2000);
+
+    console.log(process.env.NODE_ENV);
+
   }
 }
 </script>
