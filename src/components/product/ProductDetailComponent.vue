@@ -101,7 +101,7 @@
                                     <input type="number" value="1" v-model="cuantity" @change="setMin()">
                                 </div>
                             </div>
-                            <a href="#" class="primary-btn">add to cart</a>
+                            <button href="#" class="primary-btn">añadir al carrito</button>
                         </div>
                         <div class="product__details__btns__option">
                             <a href="#"><i class="fa fa-heart"></i> add to wishlist</a>

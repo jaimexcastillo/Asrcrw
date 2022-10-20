@@ -248,6 +248,9 @@ ol {
   color: $white-color;
   background: #000000;
   letter-spacing: 4px;
+  :hover{
+    color:  $white-color;
+  }
 }
 
 .site-btn {
