@@ -101,10 +101,13 @@
                                     <input type="number" value="1" v-model="cuantity" @change="setMin()">
                                 </div>
                             </div>
-                            <button href="#" class="primary-btn">añadir al carrito</button>
+                            <button class="primary-btn" @click="addToCart(), clicked = true">añadir al carrito</button>
+                            <Transition>
+                                <button  v-if="clicked" to="/shop" class="primary-btn mt-3">Proceder al pago</button>
+                            </Transition>
                         </div>
                         <div class="product__details__btns__option">
-                            <a href="#"><i class="fa fa-heart"></i> add to wishlist</a>
+                            <a href="#"><i class="fa fa-heart" ></i> add to wishlist</a>
                             <!-- <a href="#"><i class="fa fa-exchange"></i> Add To Compare</a> -->
                         </div>
                         <div class="product__details__last__option">
@@ -245,18 +248,20 @@
 </template>
 
 <script>
-import { useProductsStore } from '@/store'
+import { useProductsStore , useCart } from '@/store'
 
 export default {
     props:['products'],
     data(){
         return{
+            clicked: false,
             product: useProductsStore().products.filter(produc => produc.text === this.$route.params.text.replace(/-/g,' ') )[0],
             category: [],
             cuantity: 1,
             colors: ['negro', 'verde', 'rosa', 'amarillo', 'gris', 'blanco', 'morado', 'rojo', 'azul'],
             color: [],
             imgActice: null,
+            cartStore: useCart()
 
         }
     },
@@ -264,6 +269,16 @@ export default {
             window.scrollTo(0,0);
     },
     methods:{
+        addToCart(){
+            console.log(this.cuantity);
+            // pasar el producto especidfico
+            // this.product.category.push
+            
+            for (let i = 0; i < this.cuantity; i++) {
+                console.log('xd');
+                    this.cartStore.addItemToCart(this.product)                
+            }
+        },
         setCategory(category){
             this.category= [];
             if(!this.category.find(cat => cat == category)){
@@ -272,6 +287,7 @@ export default {
                 this.category = this.category.filter(cat => cat != category)
                 this.category == undefined ? this.category = [] : 0
             }
+            
         },
         setColor(color){
             console.log(color);

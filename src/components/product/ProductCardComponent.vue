@@ -67,13 +67,18 @@ export default {
     props: ['categorySelected', 'clases', 'filteredCategories'],
     data(){
         return {
-            products:useProductsStore().products,
+            products: useProductsStore().getProdcuts(),
             test: ['camisas'],
             colors: ['negro', 'verde', 'rosa', 'amarillo', 'gris', 'blanco', 'morado', 'rojo', 'azul'],
             categories: this.filteredCategories ?? [],
             cartStore: useCart()
             
         }
+    },
+    async mounted(){
+        await useProductsStore().getProdcuts()
+        this.$forceUpdate()
+        
     },
     methods:{
         addCartAnimation(event){
@@ -95,6 +100,7 @@ export default {
         }
     },
     watch:{
+
         //este es para el landing
         categorySelected: {
             immediate: true, 

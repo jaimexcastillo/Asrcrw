@@ -1,4 +1,5 @@
 import { defineStore } from 'pinia'
+import { useProductsStore } from './products'
 
 export const useLoader = defineStore('loader', {
     state: () => {
@@ -11,6 +12,10 @@ export const useLoader = defineStore('loader', {
     actions: {
       setLoader(val){
         this.loader = val
+      },
+      async setProducts(){
+          console.log('===');
+           await useProductsStore().getProdcuts()
       }
     },
   })

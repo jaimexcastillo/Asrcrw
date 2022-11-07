@@ -3,7 +3,7 @@
     <off-header-component /> 
     <header-component />
     
-    <router-view/>
+    <router-view />
     <vue-loader-component v-if="loader.loader" />
 
     <footer-component />
@@ -12,6 +12,7 @@
 
 <script>
 import {useLoader} from '@/store'
+import { useProductsStore } from  '@/store'
 
 export default {
   data(){
@@ -20,12 +21,14 @@ export default {
     }
   },
   beforeMount(){
-    this.loader.setLoader(true)
+    useProductsStore().getProdcuts()
+        this.loader.setLoader(true)
   },
   mounted(){
     let self = this
     setTimeout(function() {
             self.loader.setLoader(false);
+            self.loader.setProducts()
       }, 2000);
 
     console.log(process.env.NODE_ENV);

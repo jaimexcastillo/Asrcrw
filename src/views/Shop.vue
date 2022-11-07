@@ -18,7 +18,7 @@ export default {
     }
   },
   mounted(){
-    console.log(this.$route.hash);
+    // console.log(this.$route.hash);
   },
   methods:{
     filterCategories(val){
@@ -37,4 +37,3 @@ export default {
 
 }
 </script>
-e>
