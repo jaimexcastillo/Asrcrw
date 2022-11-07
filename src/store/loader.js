@@ -14,7 +14,6 @@ export const useLoader = defineStore('loader', {
         this.loader = val
       },
       async setProducts(){
-          console.log('===');
            await useProductsStore().getProdcuts()
       }
     },
