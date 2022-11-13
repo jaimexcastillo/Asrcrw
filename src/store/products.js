@@ -9,13 +9,14 @@ export const useProductsStore = defineStore('products', {
     // state: () => ({ count: 0 })
     actions: {
       async getProdcuts(){
-        const url = 'http://localhost:3001/details'
+        const url = process.env.VUE_APP_URL_SERVER + '/details'
+        console.log(url);
         const result = await fetch(url)
         const data = await result.json()
         this.products = data.data;
-        setTimeout(() => {
-          this.products = data.data
-        }, 1000);
+        // setTimeout(() => {
+        //   this.products = data.data
+        // }, 1000);
       }
     },
   })
