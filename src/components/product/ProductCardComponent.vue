@@ -77,7 +77,7 @@ export default {
     },
     async mounted(){
         await useProductsStore().getProdcuts()
-        this.$forceUpdate()
+        this.$forceUpdate() 
         
     },
     methods:{
