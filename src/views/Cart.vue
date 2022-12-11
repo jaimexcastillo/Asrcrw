@@ -10,6 +10,13 @@
                     </div>
                 </div>
             </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-4 col-lg-4">
+                      <div class="cho-container"></div>
+                    </div>
+                </div>
+            </div>
     </section>
 </template>
 
@@ -17,4 +24,18 @@
 export default {
 
 }
+
+ const mp = new MercadoPago('PUBLIC_KEY', {
+    locale: 'es-AR'
+  });
+
+  mp.checkout({
+    preference: {
+      id: 'YOUR_PREFERENCE_ID'
+    },
+    render: {
+      container: '.cho-container',
+      label: 'Pagar',
+    }
+  });
 </script>
