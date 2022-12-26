@@ -25,17 +25,17 @@ export default {
 
 }
 
- const mp = new MercadoPago('PUBLIC_KEY', {
-    locale: 'es-AR'
+  const mp = new MercadoPago(process.env.VUE_APP_MP_PK, {
+    locale: 'es-MX'
   });
 
   mp.checkout({
     preference: {
-      id: 'YOUR_PREFERENCE_ID'
+      id: '12344'
     },
     render: {
       container: '.cho-container',
-      label: 'Pagar',
+      label: 'Proceder al pago',
     }
   });
 </script>
