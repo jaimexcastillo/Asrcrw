@@ -120,14 +120,10 @@ export default {
             handler(newVal, oldval){
                 console.log(newVal);
                 this.categories = newVal;
-                if(newVal.length > 0){
-                    console.log(this.products);
-                    console.log(newVal);
+                if(newVal.length > 0)
                     this.products = this.products.filter(item => item.category.find(ele => newVal.includes(ele)))
-                    console.log(this.products);
-                }
                 else
-                this.products = useProductsStore().products
+                    this.products = useProductsStore().products
             }
         }
     },
