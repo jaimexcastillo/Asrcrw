@@ -6,7 +6,7 @@
             v-for="(product) in products" :key="product.id" 
             :class="clases"
         >   
-            <div class="product__item"  v-bind:class="[ product.sale.sale ? 'sale' : 0 ]">
+            <div class="product__item"  v-bind:class="[ product?.sale?.sale ? 'sale' : 0 ]">
                 <router-link :to=" '/product/'+product.text.replace(/ /g,'-')" > 
                     <div class="product__item__pic set-bg" data-setbg="" v-bind:style="{ backgroundImage: 'url(' + require('../../assets/img/product/'+product.img ) + ')' }">
                         <span v-if="product.new"  class="label">Nuevo</span>
@@ -118,9 +118,12 @@ export default {
 
         filteredCategories:{
             handler(newVal, oldval){
+                console.log(newVal);
                 this.categories = newVal;
-                if(newVal.length > 0)
-                this.products = this.products.find(item => item.category.find(ele => newVal.includes(ele)))
+                if(newVal.length > 0){
+                    this.products = this.products.find(item => item.category.find(ele => newVal.includes(ele)))
+                    console.log(this.products);
+                }
                 else
                 this.products = useProductsStore().products
             }

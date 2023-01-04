@@ -7,6 +7,7 @@
                     </div>
                     <div class="col-4 col-lg-4">
                         <total-buy-component />
+                        <div id="paypal-button-container"></div>
                     </div>
                 </div>
             </div>
@@ -15,6 +16,6 @@
 
 <script>
 export default {
-
+ 
 }
 </script>
