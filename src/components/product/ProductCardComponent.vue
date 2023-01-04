@@ -121,7 +121,9 @@ export default {
                 console.log(newVal);
                 this.categories = newVal;
                 if(newVal.length > 0){
-                    this.products = this.products.find(item => item.category.find(ele => newVal.includes(ele)))
+                    console.log(this.products);
+                    console.log(newVal);
+                    this.products = this.products.filter(item => item.category.find(ele => newVal.includes(ele)))
                     console.log(this.products);
                 }
                 else
