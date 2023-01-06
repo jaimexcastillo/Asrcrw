@@ -6,7 +6,7 @@ export const useCart = defineStore('cart', {
     state: () => {
         return { 
             cart: useStorage('cart',[]) ,
-            total: 0
+            total: 0,
         }
     },
     // could also be defined as
@@ -17,7 +17,21 @@ export const useCart = defineStore('cart', {
         },
         removeItemToCart(id){
            this.cart = this.cart.filter(item => parseInt(item.id) != id )
-        }
+        },
+        async savePurchase(orderData){
+            console.log('guardando');
+            const url = process.env.VUE_APP_URL_SERVER + '/save'
+            console.log(url);
+            const result = await fetch(url, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'  
+                },
+                body: JSON.stringify(orderData)
+            })
+            const data = await result.json()
+            console.log('se guardo la informacion?',data);
+          }
     },
     getters:{
         getCartQuantityItems: (state) => state.cart.length,
