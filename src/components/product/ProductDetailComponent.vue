@@ -101,9 +101,9 @@
                                     <input type="number" value="1" v-model="cuantity" @change="setMin()">
                                 </div>
                             </div>
-                            <button class="primary-btn" @click="addToCart(), clicked = true">añadir al carrito</button>
+                            <button class="primary-btn" @click="addToCart(), clicked = true" v-if="!clicked">añadir al carrito</button>
                             <Transition>
-                                <button  v-if="clicked" to="/shop" class="primary-btn mt-3">Proceder al pago</button>
+                                <button  v-if="clicked" class="primary-btn mt-3"> <router-link to="/cart"> Proceder al pago </router-link></button>
                             </Transition>
                         </div>
                         <div class="product__details__btns__option">

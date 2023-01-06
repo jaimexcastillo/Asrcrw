@@ -4,6 +4,8 @@
             <thead>
                 <tr>
                     <th>Producto</th>
+                    <th>Descripcion</th>
+                    <th>talla</th>
                     <th>Cantidad</th>
                     <th>Total</th>
                     <th></th>
@@ -11,14 +13,16 @@
             </thead>
             <tbody>
                 <tr v-for="item in cart" :key="item.id">
-                    <td class="product__cart__item">
+                    <td class="product__cart__item" align="center">
                         <div class="product__cart__item__pic">
-                            <img :src="require(`../../assets/img/product/${item.img}`)" alt="" style="width:50%">
+                            <img :src="require(`../../assets/img/product/${item.img}`)" alt="" style="width:65%">
                         </div>
-                        <div class="product__cart__item__text">
-                            <h6>{{item.text}}</h6>
-                            <h5>${{item.price}}</h5>
-                        </div>
+                    </td>
+                    <td class="quantity__item">
+                        {{item.text}}
+                    </td>
+                    <td class="quantity__item">
+                        //todo talla
                     </td>
                     <td class="quantity__item">
                         <div class="quantity">
