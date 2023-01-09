@@ -22,7 +22,22 @@
                         {{item.text}}
                     </td>
                     <td class="quantity__item">
-                        //todo talla
+                        {{
+                            item.selectedSize.find(ele => ele =='m') ? 'mediana' : null
+                        }}
+                        {{
+                            item.selectedSize.find(ele => ele =='xs') ? 'extra chica' : null
+                        }}
+                        {{
+                            item.selectedSize.find(ele => ele =='s') ? 'chica' : null
+                        }}
+                        {{
+                            item.selectedSize.find(ele => ele =='l') ? 'grande' : null
+                        }}
+                        {{
+                            item.selectedSize.find(ele => ele =='xl') ? 'extra grande' : null
+                        }}
+
                     </td>
                     <td class="quantity__item">
                         <div class="quantity">

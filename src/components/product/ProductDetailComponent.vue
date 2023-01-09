@@ -275,7 +275,8 @@ export default {
             // this.product.category.push
             
             for (let i = 0; i < this.cuantity; i++) {
-                console.log('xd');
+                    this.product.selectedSize = this.category
+                    console.log('talla', this.product);
                     this.cartStore.addItemToCart(this.product)                
             }
         },
