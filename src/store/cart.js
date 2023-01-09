@@ -18,6 +18,9 @@ export const useCart = defineStore('cart', {
         removeItemToCart(id){
            this.cart = this.cart.filter(item => parseInt(item.id) != id )
         },
+        removeAllItems(){
+            this.cart = []
+        },
         async savePurchase(orderData){
             console.log('guardando');
             const url = process.env.VUE_APP_URL_SERVER + '/save'

@@ -23,21 +23,21 @@
                     </td>
                     <td class="quantity__item">
                         {{
-                            item.selectedSize.find(ele => ele =='m') ? 'mediana' : null
+                            item?.selectedSize?.find(ele => ele =='m') ? 'mediana' : null
                         }}
                         {{
-                            item.selectedSize.find(ele => ele =='xs') ? 'extra chica' : null
+                            item?.selectedSize?.find(ele => ele =='xs') ? 'extra chica' : null
                         }}
                         {{
-                            item.selectedSize.find(ele => ele =='s') ? 'chica' : null
+                            item?.selectedSize?.find(ele => ele =='s') ? 'chica' : null
                         }}
                         {{
-                            item.selectedSize.find(ele => ele =='l') ? 'grande' : null
+                            item?.selectedSize?.find(ele => ele =='l') ? 'grande' : null
                         }}
                         {{
-                            item.selectedSize.find(ele => ele =='xl') ? 'extra grande' : null
+                            item?.selectedSize?.find(ele => ele =='xl') ? 'extra grande' : null
                         }}
-
+                        {{ item?.selectedSize == undefined ? 'no hay talla arrglar esto' : null}}
                     </td>
                     <td class="quantity__item">
                         <div class="quantity">
