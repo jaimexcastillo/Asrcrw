@@ -12,8 +12,8 @@
                         <span v-if="product.new"  class="label">Nuevo</span>
                         <span v-if="product.sale.sale" class="label">Oferta</span>
 
-                        <ul class="product__hover z-index-up">
-                            <li><a href="#"><img src="../../assets/img/icon/heart.png" alt=""></a></li>
+                        <ul class="product__hover z-index-up " style="width:55px">
+                            <li><a href="#"><img src="../../assets/img/logo-kanji.png" alt=""></a></li>
                             <!-- <li><a href="#"><img src="../assets/img/icon/compare.png" alt=""> <span>Compare</span></a></li> -->
                             <!-- <li><a href="#"><img src="../assets/img/icon/search.png" alt=""></a></li> -->
                         </ul>

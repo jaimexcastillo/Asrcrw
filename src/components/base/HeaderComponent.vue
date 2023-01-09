@@ -28,7 +28,7 @@
                 <div class="">
                     <div class="header__nav__option">
                         <a href="#" class="search-switch"><img src="../../assets/img/icon/search.png" alt=""></a>
-                        <a href="#"><img src="../../assets/img/icon/heart.png" alt=""></a>
+                        <!-- <a href="#"><img src="../../assets/img/icon/heart.png" alt=""></a> -->
                         <router-link to="/cart"><img class="cart-header" src="../../assets/img/shopping-cart/cart-shopping.svg" alt=""> <span id="cart-number" class="cart-number">{{cartQuantity.getCartQuantityItems}}</span></router-link>
                         <!-- <router-link to="/cart"><img src="../../assets/img/icon/cart.png" alt=""> <span>{{cartQuantity.getCartQuantityItems}}</span></router-link> -->
                         <div class="price">${{(cartQuantity.getTotal).replace(/\d(?=(\d{3})+\.)/g, '$&,')}}</div>
