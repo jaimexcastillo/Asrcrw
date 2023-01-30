@@ -82,7 +82,7 @@ export default {
             let items = []
             this.cart.forEach(element => {
                 items.push({
-                    name: element.text,
+                    name: element.title,
                     description: JSON.stringify(element.category),
                     unit_amount: {
                         currency_code: "MXN",

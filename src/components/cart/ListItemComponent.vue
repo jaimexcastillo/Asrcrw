@@ -15,11 +15,11 @@
                 <tr v-for="item in cart" :key="item.id">
                     <td class="product__cart__item" align="center">
                         <div class="product__cart__item__pic">
-                            <img :src="require(`../../assets/img/product/${item.img}`)" alt="" style="width:65%">
+                            <img :src="require(`../../assets/img/product/${item.img_default}`)" alt="" style="width:65%">
                         </div>
                     </td>
                     <td class="quantity__item">
-                        {{item.text}}
+                        {{item.title}}
                     </td>
                     <td class="quantity__item">
                         {{

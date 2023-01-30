@@ -10,10 +10,12 @@ export const useProductsStore = defineStore('products', {
     actions: {
       async getProdcuts(){
         const url = process.env.VUE_APP_URL_SERVER + '/products'
-        console.log(url);
+        // console.log(url);
         const result = await fetch(url)
         const data = await result.json()
         this.products = data.data;
+        //datos de prueba
+        this.products= jsonProducts
         // setTimeout(() => {
         //   this.products = data.data
         // }, 1000);

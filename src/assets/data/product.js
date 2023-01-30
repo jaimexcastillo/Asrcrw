@@ -1,8 +1,45 @@
 export const jsonProducts =[
         {       
                 id: '01',
-                text: 'camisa de austero crew',
-                img: 'product-1.jpg',
+                title: 'camisa de austero crew',
+                img_default: 'product-1.jpg',
+                items:[
+                        {
+                            id: "??",
+                            size: "xs",
+                            color: "blanco",
+                            images:[ "url..", "url..."],
+                            video: "url.."
+                        },
+                        {
+                            id: "??",
+                            size: "s",
+                            color: "verde",
+                            images:[ "url..", "url..."],
+                            video: "url.."
+                        },
+                        {
+                            id: "??",
+                            size: "xs",
+                            color: "rosa",
+                            images:[ "url..", "url..."],
+                            video: "url.."
+                        },
+                        {
+                            id: "??",
+                            size: "xs",
+                            color: "blanco",
+                            images:[ "url..", "url..."],
+                            video: "url.."
+                        },
+                        {
+                            id: "??",
+                            size: "m",
+                            color: "blanco",
+                            images:[ "url..", "url..."],
+                            video: "url.."
+                        },
+                ],
                 sale: {
                         sale: false,
                         percent: false
@@ -11,12 +48,21 @@ export const jsonProducts =[
                 price: 67,
                 best: true,
                 stars: 5,
-                category: ['hombres','camisas', '100-200', '200-350' ,'xs', 's', 'm', 'xl', '2xl', 'negro', 'verde'],
+                category: ['hombres','camisas', '100-200', '200-350' ,'xs', 's', 'm', 'xl', 'blanco', 'verde'],
         },
         {       
                 id: '02',
-                text: 'camisa de austero crew manga larga',
-                img: 'product-2.jpg',
+                title: 'camisa de austero crew manga larga',
+                img_default: 'product-2.jpg',
+                items:[
+                        {
+                            id: "??",
+                            size: "s",
+                            color: "negro",
+                            images:[ "url..", "url..."],
+                            video: "url.."
+                        }
+                ],
                 sale: {
                         sale: true,
                         percent: 10
@@ -29,8 +75,17 @@ export const jsonProducts =[
         },
         {       
                 id: '03',
-                text: 'camisa de austero crew tradi rosa y gallo',
-                img: 'product-3.jpg',
+                title: 'camisa de austero crew tradi rosa y gallo',
+                img_default: 'product-3.jpg',
+                items:[
+                        {
+                            id: "??",
+                            size: "m",
+                            color: "verde",
+                            images:[ "url..", "url..."],
+                            video: "url.."
+                        }
+                ],
                 sale: {
                         sale: false,
                         percent: false
@@ -44,8 +99,17 @@ export const jsonProducts =[
         },
         {       
                 id: '04',
-                text: 'camisa de austero crew kanji',
-                img: 'product-4.jpg',
+                title: 'camisa de austero crew kanji',
+                img_default: 'product-4.jpg',
+                items:[
+                        {
+                            id: "??",
+                            size: "l",
+                            color: "morado",
+                            images:[ "url..", "url..."],
+                            video: "url.."
+                        }
+                ],
                 sale: {
                         sale: false,
                         percent: false
@@ -59,8 +123,17 @@ export const jsonProducts =[
         },
         {       
                 id: '05',
-                text: 'sweter de austero crew kanji',
-                img: 'product-5.jpg',
+                title: 'sweter de austero crew kanji',
+                img_default: 'product-5.jpg',
+                items:[
+                        {
+                            id: "??",
+                            size: "xs",
+                            color: "blanco",
+                            images:[ "url..", "url..."],
+                            video: "url.."
+                        }
+                ],
                 sale: {
                         sale: true,
                         percent: 20
@@ -75,8 +148,17 @@ export const jsonProducts =[
         },
         {       
                 id: '06',
-                text: 'camisa de austero crew asrcrw',
-                img: 'product-6.jpg',
+                title: 'camisa de austero crew asrcrw',
+                img_default: 'product-6.jpg',
+                items:[
+                        {
+                            id: "??",
+                            size: "xs",
+                            color: "amarillo",
+                            images:[ "url..", "url..."],
+                            video: "url.."
+                        }
+                ],
                 sale: {
                         sale: true,
                         percent: 15
@@ -90,8 +172,17 @@ export const jsonProducts =[
         },
         {       
                 id: '07',
-                text: 'sweter austero creo asrcrw',
-                img: 'product-7.jpg',
+                title: 'sweter austero creo asrcrw',
+                img_default: 'product-7.jpg',
+                items:[
+                        {
+                            id: "??",
+                            size: "xs",
+                            color: "blanco",
+                            images:[ "url..", "url..."],
+                            video: "url.."
+                        }
+                ],
                 sale: {
                         sale: true,
                         percent: 5
@@ -100,14 +191,23 @@ export const jsonProducts =[
                 price: 1655,
                 best: false,
                 stars: 0,
-                category: []
+                category: ["blanco"]
 
 
         },
         {       
                 id: '08',
-                text: 'camisa de austero crew kanji mujer espalda',
-                img: 'product-8.jpg',
+                title: 'camisa de austero crew kanji mujer espalda',
+                img_default: 'product-8.jpg',
+                items:[
+                        {
+                            id: "??",
+                            size: "xs",
+                            color: "verde",
+                            images:[ "url..", "url..."],
+                            video: "url.."
+                        }
+                ],
                 sale: {
                         sale: false,
                         percent: false
@@ -116,13 +216,22 @@ export const jsonProducts =[
                 price: 165,
                 best: false,
                 stars: 5,
-                category: []
+                category: ["verde"]
 
         },
         {       
                 id: '09',
-                text: 'camisa de austero crew society',
-                img: 'product-9.jpg',
+                title: 'camisa de austero crew society',
+                img_default: 'product-9.jpg',
+                items:[
+                        {
+                            id: "??",
+                            size: "xs",
+                            color: "rosa",
+                            images:[ "url..", "url..."],
+                            video: "url.."
+                        }
+                ],
                 sale: {
                         sale: true,
                         percent:10
@@ -131,7 +240,7 @@ export const jsonProducts =[
                 price: 166,
                 best: false,
                 stars: 4,
-                category: ['camisas']
+                category: ['camisas', 'rosa']
 
 
         },

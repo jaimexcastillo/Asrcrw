@@ -49,7 +49,7 @@ const routes = [
     component: () => import(/* webpackChunkName: "about" */ '../views/Shop.vue')
   },
   {
-    path: '/product/:text',
+    path: '/product/:title',
     name: 'ProductDetails',
     // params: { NewCategories: ['accesorios'] },
     component: () => import(/* webpackChunkName: "about" */ '../views/Product.vue')

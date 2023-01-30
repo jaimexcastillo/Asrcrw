@@ -7,8 +7,8 @@
             :class="clases"
         >   
             <div class="product__item"  v-bind:class="[ product?.sale?.sale ? 'sale' : 0 ]">
-                <router-link :to=" '/product/'+product.text.replace(/ /g,'-')" > 
-                    <div class="product__item__pic set-bg" data-setbg="" v-bind:style="{ backgroundImage: 'url(' + require('../../assets/img/product/'+product.img ) + ')' }">
+                <router-link :to=" '/product/'+product.title.replace(/ /g,'-')" > 
+                    <div class="product__item__pic set-bg" data-setbg="" v-bind:style="{ backgroundImage: 'url(' + require('../../assets/img/product/'+product.img_default ) + ')' }">
                         <span v-if="product.new"  class="label">Nuevo</span>
                         <span v-if="product.sale.sale" class="label">Oferta</span>
 
@@ -21,7 +21,7 @@
                 </router-link>
 
                     <div class="product__item__text z-index-up">
-                        <h6>{{product.text}}</h6>
+                        <h6>{{product.title}}</h6>
                         <!-- <a  class="add-cart" @click="cartStore.addItemToCart(product)" >+ Añadir al carrito</a> -->
                       
                         <button class="add-cart" @click="cartStore.addItemToCart(product); addCartAnimation($event)">
@@ -82,15 +82,14 @@ export default {
     },
     methods:{
         addCartAnimation(event){
-
+                
                 let contador = document.getElementById('cart-number')
-                console.log(event.path[1]);
-                console.log(event);
-                if(!event.path[1].classList.contains('loading')){
+                // console.log(event.composedPath());
+                if(!event.composedPath()[1].classList.contains('loading')){
                     contador.classList.add('update-cart')
-                    event.path[1].classList.add('loading')
+                    event.composedPath()[1].classList.add('loading')
                     setTimeout(() => {
-                        event.path[1].classList.remove('loading')
+                        event.composedPath()[1].classList.remove('loading')
                     }, 2200);
                     setTimeout(() => {
                         contador.classList.remove('update-cart')

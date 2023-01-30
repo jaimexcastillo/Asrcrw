@@ -40,7 +40,7 @@
 
 .category-selected-box{
     color: $white-color !important;
-    background-color: $black-color;
+    background-color: $black-color !important;
 }
 
 .shop__sidebar__color  label.category-selected-color:after {
