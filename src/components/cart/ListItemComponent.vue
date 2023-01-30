@@ -19,30 +19,30 @@
                         </div>
                     </td>
                     <td class="quantity__item">
-                        {{item.title}}
+                        {{item.title}} {{item.items[0].color}}
                     </td>
                     <td class="quantity__item">
                         {{
-                            item?.selectedSize?.find(ele => ele =='m') ? 'mediana' : null
+                            item?.selectedSize =='m' ? 'mediana' : null
                         }}
                         {{
-                            item?.selectedSize?.find(ele => ele =='xs') ? 'extra chica' : null
+                            item?.selectedSize =='xs' ? 'extra chica' : null
                         }}
                         {{
-                            item?.selectedSize?.find(ele => ele =='s') ? 'chica' : null
+                            item?.selectedSize =='s' ? 'chica' : null
                         }}
                         {{
-                            item?.selectedSize?.find(ele => ele =='l') ? 'grande' : null
+                            item?.selectedSize =='l' ? 'grande' : null
                         }}
                         {{
-                            item?.selectedSize?.find(ele => ele =='xl') ? 'extra grande' : null
+                            item?.selectedSize =='xl' ? 'extra grande' : null
                         }}
                         {{ item?.selectedSize == undefined ? 'no hay talla arrglar esto' : null}}
                     </td>
                     <td class="quantity__item">
                         <div class="quantity">
                             <div class="pro-qty-2">
-                                <input type="text" :value="originalCart.filter(ele => ele.id == item.id ).length"  :id="`quantity-${item.id}`">
+                                <input type="text" :value="item.items.length"  :id="`quantity-${item.id}`">
                             </div>
                         </div>
                     </td>

@@ -37,11 +37,20 @@ export const useCart = defineStore('cart', {
           }
     },
     getters:{
-        getCartQuantityItems: (state) => state.cart.length,
+        getCartQuantityItems: (state) =>{
+            console.log();
+            let totalQuantity = 0
+            state.cart.forEach( product => {
+                totalQuantity += product.items.length 
+            })
+            return totalQuantity
+        },
         getTotal:state =>{
             state.total = 0
-            state.cart.forEach( item =>{
-            state.total = item.price + state.total
+            state.cart.forEach( product =>{
+                product.items.forEach(item =>{
+                    state.total = product.price + state.total
+                })
             // console.log(state.total);
             })
             return state.total.toFixed(2)

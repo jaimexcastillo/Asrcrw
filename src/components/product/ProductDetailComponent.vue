@@ -296,15 +296,15 @@ export default {
         addToCart(){
             console.log(this.cuantity);
             // pasar el producto especidfico
-            // this.product.category.push
-            
-            for (let i = 0; i < this.cuantity; i++) {
+            let itemToCart = {... this.product}
+            itemToCart.items =[]
+            itemToCart.selectedSize= this.size;
 
-                    
-                    this.product.selectedSize = this.category
-                    console.log('talla', this.product);
-                    this.cartStore.addItemToCart(this.product)                
+            for (let i = 0; i < this.cuantity; i++) {
+                itemToCart.items.push({size: this.size, color: this.color})
             }
+            // console.log(itemToCart);
+            this.cartStore.addItemToCart(itemToCart)                
         },
         setCategory(category){
             this.category= [];

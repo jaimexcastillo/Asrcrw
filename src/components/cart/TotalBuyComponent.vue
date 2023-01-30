@@ -79,20 +79,24 @@ export default {
 
         },
         creteArrayItems(){
-            let items = []
+            let itemsTotal = []
             this.cart.forEach(element => {
-                items.push({
-                    name: element.title,
-                    description: JSON.stringify(element.category),
-                    unit_amount: {
-                        currency_code: "MXN",
-                        value: element.price
-                    },
-                    quantity: "1"
+                element.items.forEach(item =>{
+
+                    itemsTotal.push({
+                        name: element.title,
+                        description: JSON.stringify(element.category),
+                        unit_amount: {
+                            currency_code: "MXN",
+                            value: element.price
+                        },
+                        quantity: "1"
+                    })
                 })
+
             });
-            console.log(items);
-            return items
+            console.log(itemsTotal);
+            return itemsTotal
         }
         // getTotal(){
         //     this.total = 0
