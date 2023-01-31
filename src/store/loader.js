@@ -4,7 +4,9 @@ import { useProductsStore } from './products'
 export const useLoader = defineStore('loader', {
     state: () => {
       return { 
-        loader : false
+        loader : false,
+        shoppingModal: false,
+        itemShoppingModal: null
       }
     },
     // could also be defined as
@@ -15,6 +17,10 @@ export const useLoader = defineStore('loader', {
       },
       async setProducts(){
            await useProductsStore().getProdcuts()
+      },
+      setShoppingModal(product,val){
+        this.itemShoppingModal = product
+        this.shoppingModal = val
       }
     },
   })

@@ -30,6 +30,7 @@ Vue.component('total-buy-component',() => import('@/components/cart/TotalBuyComp
 
 
 Vue.component('vue-loader-component',() => import('@/components/VueLoaderComponent.vue') )
+Vue.component('shopping-modal-component',() => import('@/components/cart/ShoppingModalComponent.vue') )
 Vue.component('footer-component',() => import('@/components/base/FooterComponent.vue') )
 
 

@@ -24,7 +24,7 @@
                         <h6>{{product.title}}</h6>
                         <!-- <a  class="add-cart" @click="cartStore.addItemToCart(product)" >+ Añadir al carrito</a> -->
                       
-                        <button class="add-cart" @click="cartStore.addItemToCart(product); addCartAnimation($event)">
+                        <button class="add-cart" @click="loader.setShoppingModal(product, true); addCartAnimation($event)">
                             <span>Añadir al carrito</span>
                             <div class="cart">
                                 <svg viewBox="0 0 36 26">
@@ -60,7 +60,7 @@
 </template>
 
 <script>
-import { useProductsStore, useCart } from '@/store'
+import { useProductsStore, useCart, useLoader } from '@/store'
 
 
 export default {
@@ -71,7 +71,8 @@ export default {
             test: ['camisas'],
             colors: ['negro', 'verde', 'rosa', 'amarillo', 'gris', 'blanco', 'morado', 'rojo', 'azul'],
             categories: this.filteredCategories ?? [],
-            cartStore: useCart()
+            cartStore: useCart(),
+            loader: useLoader()
             
         }
     },

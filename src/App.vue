@@ -1,10 +1,11 @@
 <template>
-  <div id="app">
+  <div id="app" style="position: relative">
     <off-header-component /> 
     <header-component />
     
     <router-view />
     <vue-loader-component v-if="loader.loader" />
+    <shopping-modal-component v-if="loader.shoppingModal" />
 
     <footer-component />
   </div>
