@@ -3,12 +3,13 @@
 -----------------------*/
 .close-header{
     position: absolute;
-    top: 10px;
+    top: 3px;
     right: 15px;
-    background: $white-color;
+    // background: $white-color;
     border-radius: 5px;
     padding: 0px 9px;
     cursor: pointer;
+    color: $white-color;
 }
 
 .header {

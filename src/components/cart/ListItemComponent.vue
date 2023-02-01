@@ -3,11 +3,11 @@
         <table>
             <thead>
                 <tr>
-                    <th>Producto</th>
-                    <th>Descripcion</th>
-                    <th>talla</th>
-                    <th>Cantidad</th>
-                    <th>Total</th>
+                    <th class="px-2">Producto</th>
+                    <th class="px-2">Descripcion</th>
+                    <th class="px-2">talla</th>
+                    <th class="px-2">Cantidad</th>
+                    <th class="px-2">Total</th>
                     <th></th>
                 </tr>
             </thead>

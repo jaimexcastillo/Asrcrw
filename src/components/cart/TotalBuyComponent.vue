@@ -8,12 +8,12 @@
             </form>
         </div>
         <div class="cart__total">
-            <h6>Cart total</h6>
+            <h6>Resumen</h6>
             <ul>
                 <li>Subtotal <span>$ 169.50</span></li>
                 <li>Total <span>$ {{total.getTotal}}</span></li>
             </ul>
-            <a href="#" class="primary-btn">Proceed to checkout</a>
+            <button  @click="$emit('step2')" class="primary-btn text-center mx-auto">Realizar pago</button>
         </div>
     </div>
 </template>

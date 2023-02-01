@@ -1,10 +1,10 @@
 <template>
   <div class="container">
             <div class="row d-flex justify-content-between">
-                <div class="">
+                <div class="" style="width: 33%">
                     <nav class="header__menu mobile-menu">
                         <ul>
-                            <li v-bind:class="[active === '/'?  'active' : '']" @click="active ='/' "><router-link to="/">Home</router-link></li>
+                            <li v-bind:class="[active === '/'?  'active' : '']" @click="active ='/' "><router-link to="/">Inicio</router-link></li>
                             <li v-bind:class="[active === '/shop'?  'active' : '']" @click="active ='/shop' "><router-link to="/shop">Tienda</router-link>
                                 <ul class="dropdown">
                                     <li><router-link to="/shop">Todos</router-link></li>
@@ -14,18 +14,18 @@
                                     <li><router-link to="/shop/accesorios">Accesorios</router-link></li>
                                 </ul>
                             </li>
-                            <li v-bind:class="[active === '/about'?  'active' : '']" @click="active ='/about' " ><router-link to="/about">About</router-link></li>
+                            <li v-bind:class="[active === '/about'?  'active' : '']" @click="active ='/about' " ><router-link to="/about">Conocenos</router-link></li>
                             <!-- <li><a href="./blog.html">Blog</a></li> -->
                             <!-- <li><a href="./contact.html">Contacts</a></li> -->
                         </ul>
                     </nav>
                 </div>
-                 <div class="">
+                 <div class="" style="width: 33%">
                     <div class="header__logo mx-auto">
                         <router-link to="/"><img src="../../assets/img/logo.jpg" alt=""></router-link>
                     </div>
                 </div>
-                <div class="">
+                <div class="" style="width: 33%">
                     <div class="header__nav__option">
                         <a href="#" class="search-switch"><img src="../../assets/img/icon/search.png" alt=""></a>
                         <!-- <a href="#"><img src="../../assets/img/icon/heart.png" alt=""></a> -->
