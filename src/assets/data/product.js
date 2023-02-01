@@ -6,7 +6,7 @@ export const jsonProducts =[
                 items:[
                         {
                             id: "??",
-                            size: "xs",
+                            size: "s",
                             color: "blanco",
                             images:[ "url..", "url..."],
                             video: "url.."
@@ -20,14 +20,14 @@ export const jsonProducts =[
                         },
                         {
                             id: "??",
-                            size: "xs",
+                            size: "s",
                             color: "rosa",
                             images:[ "url..", "url..."],
                             video: "url.."
                         },
                         {
                             id: "??",
-                            size: "xs",
+                            size: "m",
                             color: "blanco",
                             images:[ "url..", "url..."],
                             video: "url.."
@@ -128,7 +128,7 @@ export const jsonProducts =[
                 items:[
                         {
                             id: "??",
-                            size: "xs",
+                            size: "s",
                             color: "blanco",
                             images:[ "url..", "url..."],
                             video: "url.."
@@ -153,7 +153,7 @@ export const jsonProducts =[
                 items:[
                         {
                             id: "??",
-                            size: "xs",
+                            size: "s",
                             color: "amarillo",
                             images:[ "url..", "url..."],
                             video: "url.."
@@ -177,7 +177,7 @@ export const jsonProducts =[
                 items:[
                         {
                             id: "??",
-                            size: "xs",
+                            size: "s",
                             color: "blanco",
                             images:[ "url..", "url..."],
                             video: "url.."
@@ -226,7 +226,7 @@ export const jsonProducts =[
                 items:[
                         {
                             id: "??",
-                            size: "xs",
+                            size: "s",
                             color: "rosa",
                             images:[ "url..", "url..."],
                             video: "url.."

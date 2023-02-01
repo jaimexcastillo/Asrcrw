@@ -20,9 +20,6 @@
                         <div class="product__details__option">
                             <div class="product__details__option__size in-modal-size">
                                 <span>Talla:</span>
-                                <button  for="xs" id="size-xs" @click="setSize('xs')"  v-bind:class="[ category.find(ele => ele == 'xs' )  ? 'category-selected-box' : '']" class="select-category">xs
-                                    <!-- <input type="radio" id="xs"> -->
-                                </button>
                                 <button for="sm" id="size-s" @click="setSize('s')" v-bind:class="[ category.find(ele => ele == 's' )  ? 'category-selected-box' : '']" class="select-category">s
                                     <!-- <input type="radio" id="sm"> -->
                                 </button>
@@ -35,7 +32,7 @@
                                 <button for="xl" id="size-xl" @click="setSize('xl')" v-bind:class="[ category.find(ele => ele == 'xl' )  ? 'category-selected-box' : '']" class="select-category">xl
                                     <!-- <input type="radio" id="2xl"> -->
                                 </button>
-                                <button for="2xl" id="size-2xl" @click="setSize('2xl')" v-bind:class="[ category.find(ele => ele == '2xl' )  ? 'category-selected-box' : '']" class="select-category">2xl
+                                <button for="2xl" id="size-xxl" @click="setSize('2xl')" v-bind:class="[ category.find(ele => ele == 'xxl' )  ? 'category-selected-box' : '']" class="select-category">2xl
                                     <!-- <input type="radio" id="2xl"> -->
                                 </button>
                             </div>
@@ -101,7 +98,7 @@ export default {
             color: null,
             imgActice: null,
             cartStore: useCart(),
-            sizes : ['xs', 's', 'm', 'l', 'xl', '2xl'],
+            sizes : ['s', 'm', 'l', 'xl', 'xxl'],
             size: null,
             coincidencias: null,
             sizeCoincidencias: null

@@ -193,93 +193,93 @@ export default {
             color: null,
             imgActice: null,
             cartStore: useCart(),
-            sizes : ['xs', 's', 'm', 'l', 'xl', '2xl'],
+            sizes : ['s', 'm', 'l', 'xl', '2xl'],
             size: null,
             coincidencias: null,
             sizeCoincidencias: null
         }
     },
     mounted(){
-            window.scrollTo(0,0);
-            this.sizes.forEach(size =>{
-                this.product.items.find(item => item.size == size) ? '' : document.getElementById(`size-${size}`).disabled= true 
-            })
+            // window.scrollTo(0,0);
+            // this.sizes.forEach(size =>{
+            //     this.product.items.find(item => item.size == size) ? '' : document.getElementById(`size-${size}`).disabled= true 
+            // })
             
     },
-    methods:{
-        setSize(size){ 
-            if(this.size){
-                this.sizes.forEach(size =>{
-                    document.getElementById(`size-${size}`).classList.remove('category-selected-box') 
-                })
-            }
-            document.getElementById(`size-${size}`).classList.add('category-selected-box')
-            this.size= size
-        },
-        addToCart(){
-            console.log(this.cuantity);
-            // pasar el producto especidfico
-            let itemToCart = {... this.product}
-            itemToCart.items =[]
-            itemToCart.selectedSize= this.size;
+    // methods:{
+    //     setSize(size){ 
+    //         if(this.size){
+    //             this.sizes.forEach(size =>{
+    //                 document.getElementById(`size-${size}`).classList.remove('category-selected-box') 
+    //             })
+    //         }
+    //         document.getElementById(`size-${size}`).classList.add('category-selected-box')
+    //         this.size= size
+    //     },
+    //     addToCart(){
+    //         console.log(this.cuantity);
+    //         // pasar el producto especidfico
+    //         let itemToCart = {... this.product}
+    //         itemToCart.items =[]
+    //         itemToCart.selectedSize= this.size;
 
-            for (let i = 0; i < this.cuantity; i++) {
-                itemToCart.items.push({size: this.size, color: this.color})
-            }
-            // console.log(itemToCart);
-            this.cartStore.addItemToCart(itemToCart)                
-        },
-        setCategory(category){
-            this.category= [];
-            if(!this.category.find(cat => cat == category)){
-                this.category.push(category)
-            }else{
-                this.category = this.category.filter(cat => cat != category)
-                this.category == undefined ? this.category = [] : 0
-            }
+    //         for (let i = 0; i < this.cuantity; i++) {
+    //             itemToCart.items.push({size: this.size, color: this.color})
+    //         }
+    //         // console.log(itemToCart);
+    //         this.cartStore.addItemToCart(itemToCart)                
+    //     },
+    //     setCategory(category){
+    //         this.category= [];
+    //         if(!this.category.find(cat => cat == category)){
+    //             this.category.push(category)
+    //         }else{
+    //             this.category = this.category.filter(cat => cat != category)
+    //             this.category == undefined ? this.category = [] : 0
+    //         }
             
-        },
-        setColor(color){
-            console.log(color);
-            this.color= [];
-            if(!this.color.find(cat => cat == color)){
-                this.color.push(color)
-            }else{
-                this.color = this.color.filter(cat => cat != color)
-                this.color == undefined ? this.color = [] : 0
-            }
-        },
-        // setMin(){
-        //     this.cuantity < 1 ? this.cuantity = 1 : 0
-        // }
-    },
-    watch:{
-        size(newval, oldval){
-            this.color = null
+    //     },
+    //     setColor(color){
+    //         console.log(color);
+    //         this.color= [];
+    //         if(!this.color.find(cat => cat == color)){
+    //             this.color.push(color)
+    //         }else{
+    //             this.color = this.color.filter(cat => cat != color)
+    //             this.color == undefined ? this.color = [] : 0
+    //         }
+    //     },
+    //     // setMin(){
+    //     //     this.cuantity < 1 ? this.cuantity = 1 : 0
+    //     // }
+    // },
+    // watch:{
+    //     size(newval, oldval){
+    //         this.color = null
 
-            if(newval){
-                let coincidencias = this.product.items.filter(item =>{
+    //         if(newval){
+    //             let coincidencias = this.product.items.filter(item =>{
 
-                    if(item.size == newval)
-                    return item
+    //                 if(item.size == newval)
+    //                 return item
 
-                })
-               this.coincidencias = coincidencias
-               this.sizeCoincidencias = coincidencias
-            }
-        },
-        color(newval, oldval){
-            if(newval &&  this.size){
-                let coincidencias = this.product.items.filter(item =>{
+    //             })
+    //            this.coincidencias = coincidencias
+    //            this.sizeCoincidencias = coincidencias
+    //         }
+    //     },
+    //     color(newval, oldval){
+    //         if(newval &&  this.size){
+    //             let coincidencias = this.product.items.filter(item =>{
 
-                    if(item.size == this.size && item.color == newval)
-                    return item
+    //                 if(item.size == this.size && item.color == newval)
+    //                 return item
 
-                })
-               this.coincidencias = coincidencias
-            }
-        },
-    }
+    //             })
+    //            this.coincidencias = coincidencias
+    //         }
+    //     },
+    // }
 
 }
 </script>
