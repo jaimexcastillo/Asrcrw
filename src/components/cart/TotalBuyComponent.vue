@@ -33,6 +33,7 @@ export default {
     mounted(){
         useProductsStore().auth()
         this.createPaypalEventHandler()
+        this.loader.shoppingModal = false
     },
     methods:{
         createPaypalEventHandler(){

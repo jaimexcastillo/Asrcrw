@@ -42,7 +42,7 @@
                     <td class="quantity__item">
                         <div class="quantity">
                             <div class="pro-qty-2">
-                                <input type="text" :value="item.items.length"  :id="`quantity-${item.id}`">
+                                <input type="text" disabled :value="item.items.length"  :id="`quantity-${item.id}`">
                             </div>
                         </div>
                     </td>

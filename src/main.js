@@ -26,6 +26,7 @@ Vue.component('filter-shop-component',() => import('@/components/shop/FilterShop
 Vue.component('product-detail-component',() => import('@/components/product/ProductDetailComponent.vue') )
 
 Vue.component('list-item-component',() => import('@/components/cart/ListItemComponent.vue') )
+Vue.component('cart-setter-component',() => import('@/components/cart/CartSetterComponent.vue') )
 Vue.component('total-buy-component',() => import('@/components/cart/TotalBuyComponent.vue') )
 
 
