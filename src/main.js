@@ -34,6 +34,8 @@ Vue.component('vue-loader-component',() => import('@/components/VueLoaderCompone
 Vue.component('shopping-modal-component',() => import('@/components/cart/ShoppingModalComponent.vue') )
 Vue.component('footer-component',() => import('@/components/base/FooterComponent.vue') )
 
+Vue.component('vue-inner-zoom-component', ()  => import('@/components/base/InnerimageZoomComponent.vue') )
+  
 
 new Vue({
   router,

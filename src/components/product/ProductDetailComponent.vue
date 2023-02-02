@@ -37,7 +37,8 @@
                     <div class="tab-content">
                         <div class="tab-pane active" id="tabs-1" role="tabpanel">
                             <div class="product__details__pic__item" >
-                                <img :src="require(`@/assets/img/product/${product.img_default}`)"  alt="">
+                                <!-- <img :src="require(`@/assets/img/product/${product.img_default}`)"  alt=""> -->
+                                <vue-inner-zoom-component :src="require(`@/assets/img/product/${product.img_default}`)"  alt=""> </vue-inner-zoom-component>
                             </div>
                         </div>
                         
