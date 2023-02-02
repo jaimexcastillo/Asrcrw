@@ -413,7 +413,8 @@
                 border: none;
                 font-weight: 700;
                 padding-bottom: 10px;
-                border-bottom: 2px solid transparent;
+                background-color: $white-color;
+                // border-bottom: 2px solid transparent;
 
                 &.active {
                     border-bottom: 2px solid $primary-color;

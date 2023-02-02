@@ -24,6 +24,7 @@ Vue.component('shop-component',() => import('@/components/shop/ShopComponent.vue
 Vue.component('filter-shop-component',() => import('@/components/shop/FilterShopComponent.vue') )
 
 Vue.component('product-detail-component',() => import('@/components/product/ProductDetailComponent.vue') )
+Vue.component('window-info-component', () => import('@/components/product/WindowInfoComponent.vue'))
 
 Vue.component('list-item-component',() => import('@/components/cart/ListItemComponent.vue') )
 Vue.component('cart-setter-component',() => import('@/components/cart/CartSetterComponent.vue') )
