@@ -40,10 +40,10 @@
                                 <div v-if="size" class="product__details__option__color">
                                     <span>Color:</span>
 
-                                    <label v-for="item in sizeCoincidencias.filter((v,i,a)=>a.findIndex(v2=>(v2.color===v.color))===i)"  :ref="item.color" :key="item.color" v-if=""  v-bind:class="[item.color, item.color == color ? 'active': 0]"  @click="color = item.color, $emit('changeColor', item.color)"  for="sp-1" >
-                                    
-                                        <!-- <input type="radio" id="sp-1"> -->
-                                    </label>
+                                    <button v-for="item in sizeCoincidencias.filter((v,i,a)=>a.findIndex(v2=>(v2.color===v.color))===i)"  :ref="item.color" :key="item.color" v-if=""  v-bind:class="[item.color, item.color == color ? 'active': 0]"  @click="color = item.color, $emit('changeColor', item.color)"  for="sp-1" >
+                                    </button>
+                                    <button v-for="(item, index) in difColors"  :key="index"  style="cursor: not-allowed;opacity:.5"  v-bind:class="[item]" :disabled="true" >
+                                    </button> 
                                 </div>
                             </Transition>
                         </div>
@@ -101,7 +101,8 @@ export default {
             sizes : ['s', 'm', 'l', 'xl', 'xxl'],
             size: null,
             coincidencias: null,
-            sizeCoincidencias: null
+            sizeCoincidencias: null,
+            difColors:[]
         }
     },
      mounted(){
@@ -170,6 +171,20 @@ export default {
                this.coincidencias = coincidencias
                this.sizeCoincidencias = coincidencias
             }
+        },
+        sizeCoincidencias(newval){
+            // console.log(newval);
+            let allColors = []
+            this.product.items.forEach( item => {
+                allColors.push(item.color)
+            })
+            allColors = [...new Set(allColors)]
+
+            newval.forEach(item => {
+                allColors = allColors.filter(ele => ele != item.color) 
+            }) 
+            this.difColors = allColors
+
         },
         color(newval, oldval){
             if(newval &&  this.size){
