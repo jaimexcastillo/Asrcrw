@@ -40,7 +40,7 @@
                                 <div v-if="size" class="product__details__option__color">
                                     <span>Color:</span>
 
-                                    <label v-for="item in sizeCoincidencias.filter((v,i,a)=>a.findIndex(v2=>(v2.color===v.color))===i)"  :ref="item.color" :key="item.color" v-if="colors.find(ele => ele == item.color && size == item.size )"  v-bind:class="[item.color, item.color == color ? 'active': 0]"  @click="color = item.color"  for="sp-1" >
+                                    <label v-for="item in sizeCoincidencias.filter((v,i,a)=>a.findIndex(v2=>(v2.color===v.color))===i)"  :ref="item.color" :key="item.color" v-if=""  v-bind:class="[item.color, item.color == color ? 'active': 0]"  @click="color = item.color, $emit('changeColor', item.color)"  for="sp-1" >
                                     
                                         <!-- <input type="radio" id="sp-1"> -->
                                     </label>
