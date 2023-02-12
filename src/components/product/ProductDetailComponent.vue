@@ -89,6 +89,7 @@ export default {
         },
         changeColor(color){
             this.color = color
+            this.imageSelected = useProductsStore().products.filter(produc => produc.title === this.$route.params.title.replace(/-/g,' ') )[0].images[`${color}`][0]
         }
     }
 }

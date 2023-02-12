@@ -86,7 +86,7 @@ export default {
 
                     itemsTotal.push({
                         name: element.title,
-                        description: JSON.stringify(element.category),
+                        description: JSON.stringify({color: item.color, size: item.size}),
                         unit_amount: {
                             currency_code: "MXN",
                             value: element.price

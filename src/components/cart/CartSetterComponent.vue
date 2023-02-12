@@ -40,7 +40,7 @@
                                 <div v-if="size" class="product__details__option__color">
                                     <span>Color:</span>
 
-                                    <button v-for="item in sizeCoincidencias.filter((v,i,a)=>a.findIndex(v2=>(v2.color===v.color))===i)"  :ref="item.color" :key="item.color" v-if=""  v-bind:class="[item.color, item.color == color ? 'active': 0]"  @click="color = item.color, $emit('changeColor', item.color)"  for="sp-1" >
+                                    <button v-for="item in sizeCoincidencias.filter((v,i,a)=>a.findIndex(v2=>(v2.color===v.color))===i)"  :ref="item.color" :key="item.color"  v-bind:class="[item.color, item.color == color ? 'active': 0]"  @click="color = item.color, $emit('changeColor', item.color)"  for="sp-1" >
                                     </button>
                                     <button v-for="(item, index) in difColors"  :key="index"  style="cursor: not-allowed;opacity:.5"  v-bind:class="[item]" :disabled="true" >
                                     </button> 

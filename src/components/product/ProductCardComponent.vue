@@ -3,7 +3,7 @@
 
         <div 
             class="mix new-arrivals" 
-            v-for="(product) in products" :key="product.id" 
+            v-for="(product, index) in products" :key="product?._id ?? index" 
             :class="clases"
         >   
             <div class="product__item"  v-bind:class="[ product?.sale?.sale ? 'sale' : 0 ]">
