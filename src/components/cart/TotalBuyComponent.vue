@@ -19,7 +19,7 @@
 </template>
 
 <script>
-import { useCart, useProductsStore, useLoader } from '@/store'
+import { useCart, useLoader } from '@/store'
 
 export default {
     data(){
@@ -31,7 +31,6 @@ export default {
         }
     },
     mounted(){
-        useProductsStore().auth()
         this.createPaypalEventHandler()
         this.loader.shoppingModal = false
     },
@@ -86,7 +85,7 @@ export default {
 
                     itemsTotal.push({
                         name: element.title,
-                        description: JSON.stringify({color: item.color, size: item.size}),
+                        description: JSON.stringify({color: item.color, size: item.size, id: item?._id}),
                         unit_amount: {
                             currency_code: "MXN",
                             value: element.price

@@ -20,18 +20,18 @@ export const useProductsStore = defineStore('products', {
         //   this.products = data.data
         // }, 1000);
       },
-      async auth(){
-        const url = process.env.VUE_APP_URL_SERVER + '/auth'
-        console.log(url);
-        const result = await fetch(url,{
-          method: "POST",
-          headers: {
-            'Content-Type': 'application/json'  
-          },
-          body: JSON.stringify({email: "jaime@gmail.com", password: "pass123"})
-        })
-        const data = await result.json()
-        this.acces_token = data.token
-      }
+      // async auth(){
+      //   const url = process.env.VUE_APP_URL_SERVER + '/auth'
+      //   console.log(url);
+      //   const result = await fetch(url,{
+      //     method: "POST",
+      //     headers: {
+      //       'Content-Type': 'application/json'  
+      //     },
+      //     body: JSON.stringify({email: "jaime@gmail.com", password: "pass123"})
+      //   })
+      //   const data = await result.json()
+      //   this.acces_token = data.token
+      // }
     },
   })
