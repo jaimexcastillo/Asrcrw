@@ -85,7 +85,11 @@ export const jsonProducts =[
                 items:[
                         {
                             size: "s",
-                            color: "negro"
+                            color: "negro",
+                            cart: {
+                                status: false,
+                                time: null,
+                            }
                         }
                 ],
                 sale: {
@@ -111,7 +115,11 @@ export const jsonProducts =[
                 items:[
                         {
                             size: "m",
-                            color: "verde"
+                            color: "verde",
+                            cart: {
+                                status: false,
+                                time: null,
+                            }
                         }
                 ],
                 sale: {
@@ -137,7 +145,11 @@ export const jsonProducts =[
                 items:[
                         {
                             size: "l",
-                            color: "morado"
+                            color: "morado",
+                            cart: {
+                                status: false,
+                                time: null,
+                            }
                         }
                 ],
                 sale: {
@@ -164,7 +176,11 @@ export const jsonProducts =[
                 items:[
                         {
                             size: "s",
-                            color: "blanco"
+                            color: "blanco",
+                            cart: {
+                                status: false,
+                                time: null,
+                            }
                         }
                 ],
                 sale: {
@@ -192,7 +208,11 @@ export const jsonProducts =[
                 items:[
                         {
                             size: "s",
-                            color: "amarillo"
+                            color: "amarillo",
+                            cart: {
+                                status: false,
+                                time: null,
+                            }
                         }
                 ],
                 images:{ 
@@ -219,7 +239,11 @@ export const jsonProducts =[
                 items:[
                         {
                             size: "s",
-                            color: "blanco"
+                            color: "blanco",
+                            cart: {
+                                status: false,
+                                time: null,
+                            }
                         }
                 ],
                 images:{ 
@@ -247,7 +271,11 @@ export const jsonProducts =[
                 items:[
                         {
                             size: "xs",
-                            color: "verde"
+                            color: "verde",
+                            cart: {
+                                status: false,
+                                time: null,
+                            }
                         }
                 ],
                 images:{ 
@@ -274,7 +302,11 @@ export const jsonProducts =[
                 items:[
                         {
                             size: "s",
-                            color: "rosa"
+                            color: "rosa",
+                            cart: {
+                                status: false,
+                                time: null,
+                            }
                         }
                 ],
                 images:{ 
