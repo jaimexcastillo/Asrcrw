@@ -82,10 +82,10 @@ export default {
             let itemsTotal = []
             this.cart.forEach(element => {
                 element.items.forEach(item =>{
-
+                    
                     itemsTotal.push({
                         name: element.title,
-                        description: JSON.stringify({color: item.color, size: item.size, id: item?._id}),
+                        description: JSON.stringify({color: item.color, size: item.size, _id: item?._id}),
                         unit_amount: {
                             currency_code: "MXN",
                             value: element.price

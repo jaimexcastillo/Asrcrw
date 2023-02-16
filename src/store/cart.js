@@ -1,5 +1,6 @@
 import { defineStore } from 'pinia'
 import { useStorage } from '@vueuse/core'
+import  useProductsStore  from '@/store/products'
 // import jsonProducts from '@/assets/data/product.js'
 
 export const useCart = defineStore('cart', {
@@ -12,11 +13,29 @@ export const useCart = defineStore('cart', {
     // could also be defined as
     // state: () => ({ count: 0 })
     actions: {
-        addItemToCart(item){
+        async addItemToCart(item){
             this.cart.push(item)
+            item.img_default = null
+            item.images = null
+            console.log(item);
+            const url = process.env.VUE_APP_URL_SERVER + '/addToCart'
+            const response = await fetch(url, {
+                method: 'POST',
+                headers:{
+                    'Content-Type': 'application/json'  
+                },
+                body: JSON.stringify(item)
+            })
+
+
+            response ??
+            useProductsStore.getProdcuts();
+
+            
+
         },
         removeItemToCart(id){
-           this.cart = this.cart.filter(item => parseInt(item.id) != id )
+           this.cart = this.cart.filter(item => item._id != id )
         },
         removeAllItems(){
             this.cart = []

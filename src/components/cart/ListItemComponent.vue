@@ -12,7 +12,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr v-for="item in cart" :key="item.id">
+                <tr v-for="item in cart" :key="item._id">
                     <td class="product__cart__item" align="center">
                         <div class="product__cart__item__pic">
                             <img :src="'data:image/jpeg;base64,'+item.img_default" alt="" style="width:65%">
@@ -47,7 +47,7 @@
                         </div>
                     </td>
                     <td class="cart__price">${{item.price}}</td>
-                    <td class="cart__close" @click="RemoveItem(item.id)" ><i class="fa fa-close"></i></td>
+                    <td class="cart__close" @click="RemoveItem(item._id)" ><i class="fa fa-close"></i></td>
                 </tr>
             </tbody>
         </table>

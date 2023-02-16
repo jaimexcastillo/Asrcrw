@@ -128,10 +128,22 @@ export default {
             itemToCart.selectedSize= this.size;
 
             for (let i = 0; i < this.cuantity; i++) {
-                itemToCart.items.push({size: this.size, color: this.color})
+
+                itemToCart.items.push({size: this.size, color: this.color, _id: this.getIdItem(this.size, this.color)})
             }
-            // console.log(itemToCart);
+            console.log(itemToCart);
             this.cartStore.addItemToCart(itemToCart)                
+        },
+        getIdItem(size, color){
+            for (let i = 0; i < this.product.items.length; i++) {
+                
+                if(this.product.items[i]?.cart?.status == false &&  this.product.items[i].color == color && this.product.items[i].size == size ){
+                    this.product.items[i].cart.status = true
+                    return this.product.items[i]?._id
+                }
+            }
+            //mostrar que tus articulos ya no tienen existencia nimodo
+            return null
         },
         setCategory(category){
             this.category= [];

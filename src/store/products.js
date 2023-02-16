@@ -15,7 +15,7 @@ export const useProductsStore = defineStore('products', {
         const data = await result.json()
         this.products = data.data;
         //datos de prueba
-        this.products= jsonProducts
+        // this.products= jsonProducts
         // setTimeout(() => {
         //   this.products = data.data
         // }, 1000);
