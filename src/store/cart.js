@@ -1,6 +1,6 @@
 import { defineStore } from 'pinia'
 import { useStorage } from '@vueuse/core'
-import  useProductsStore  from '@/store/products'
+import  {useProductsStore}  from '@/store/products'
 // import jsonProducts from '@/assets/data/product.js'
 
 export const useCart = defineStore('cart', {
